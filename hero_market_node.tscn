@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://scnj7j1am8ab"]
+[gd_scene load_steps=5 format=3 uid="uid://scnj7j1am8ab"]
 
 [ext_resource type="Texture2D" uid="uid://bhh7rc83tuk16" path="res://lico.png" id="1_fdthb"]
 [ext_resource type="Script" path="res://HeroBuyButton.gd" id="2_3mbx1"]
+[ext_resource type="Script" path="res://TextureFace1.gd" id="2_ifxqn"]
+[ext_resource type="Script" path="res://BackToHeroesNode.gd" id="4_43tlm"]
 
 [node name="HeroMarketNode" type="Node2D"]
+position = Vector2(29, 33)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_right = 680.0
-offset_bottom = 1196.0
+offset_left = -6.0
+offset_top = -10.0
+offset_right = 627.0
+offset_bottom = 723.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -19,6 +24,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_fdthb")
+script = ExtResource("2_ifxqn")
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -67,3 +73,11 @@ cena 500"
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 text = "kupitj"
+
+[node name="BackToHeroesNode" type="Button" parent="."]
+offset_left = 166.0
+offset_top = 780.0
+offset_right = 471.0
+offset_bottom = 904.0
+text = "Go bak"
+script = ExtResource("4_43tlm")

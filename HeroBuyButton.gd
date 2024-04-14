@@ -10,13 +10,9 @@ func _ready():
 	var err = config.load("user://heroConfig.cfg")
 	for save in config.get_sections():
 		var heroId = config.get_value(save, "heroId")
-		var bought = config.get_value(save, "bought")
-		if heroId == 1 && bought == true:
+		if heroId == 1:
 			$".".set_disabled(true)
-	pass # Replace with function body.
-	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 	
@@ -25,8 +21,10 @@ func _pressed():
 	if GoldenScript.cutGold(500):
 		var config = ConfigFile.new()
 		var config_file = "user://heroConfig.cfg"
-		config.set_value("save", "heroId", 1)
-		config.set_value("save", "bought", true)
+		config.set_value("Hero1", "heroName", "Vitalya")
+		config.set_value("Hero1", "texture", "res://lico.png")
+		config.set_value("Hero1", "flatDamage", "15")
+		config.set_value("Hero1", "items", "")
 		config.save("user://heroConfig.cfg")
 		$".".set_disabled(true)
 	else:
