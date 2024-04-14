@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://oasbuxlv3d84"]
+
+[ext_resource type="Script" path="res://HireHero.gd" id="1_1w4cv"]
+
+[node name="HeroesNode2d" type="Node2D"]
+
+[node name="HireHero" type="Button" parent="."]
+offset_left = 104.0
+offset_top = 239.0
+offset_right = 540.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 36
+text = "Hire hero"
+script = ExtResource("1_1w4cv")

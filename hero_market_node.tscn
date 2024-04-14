@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://scnj7j1am8ab"]
+
+[ext_resource type="Texture2D" uid="uid://bhh7rc83tuk16" path="res://lico.png" id="1_fdthb"]
+[ext_resource type="Script" path="res://HeroBuyButton.gd" id="2_3mbx1"]
+
+[node name="HeroMarketNode" type="Node2D"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 680.0
+offset_bottom = 1196.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_fdthb")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "DAMAG 15
+cena 500"
+
+[node name="HeroBuyButton" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+text = "kupitj"
+script = ExtResource("2_3mbx1")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("1_fdthb")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "DAMAG 15
+cena 500"
+
+[node name="HeroBuyButton" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+text = "kupitj"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("1_fdthb")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "DAMAG 15
+cena 500"
+
+[node name="HeroBuyButton" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+text = "kupitj"
