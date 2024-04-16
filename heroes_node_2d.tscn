@@ -1,26 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://oasbuxlv3d84"]
+[gd_scene load_steps=5 format=3 uid="uid://oasbuxlv3d84"]
 
 [ext_resource type="Script" path="res://HireHero.gd" id="1_1w4cv"]
 [ext_resource type="Script" path="res://BoughtHeroList.gd" id="2_kgt0n"]
+[ext_resource type="Script" path="res://SendHero.gd" id="2_pa87o"]
+[ext_resource type="Script" path="res://HNBack.gd" id="3_2vg3o"]
 
 [node name="HeroesNode2d" type="Node2D"]
 
-[node name="HireHero" type="Button" parent="."]
-offset_left = 115.0
-offset_top = 544.0
-offset_right = 551.0
-offset_bottom = 654.0
+[node name="HNHireHero" type="Button" parent="."]
+offset_left = 127.0
+offset_top = 580.0
+offset_right = 563.0
+offset_bottom = 690.0
 theme_override_font_sizes/font_size = 36
 text = "Hire hero"
 script = ExtResource("1_1w4cv")
 
-[node name="Container" type="Container" parent="."]
-offset_left = 12.0
-offset_top = 10.0
-offset_right = 669.0
-offset_bottom = 498.0
+[node name="HNSendHero" type="Button" parent="."]
+offset_left = 129.0
+offset_top = 735.0
+offset_right = 565.0
+offset_bottom = 845.0
+theme_override_font_sizes/font_size = 36
+text = "Send hero in campaign"
+script = ExtResource("2_pa87o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+[node name="HNBack" type="Button" parent="."]
+offset_left = 131.0
+offset_top = 884.0
+offset_right = 560.0
+offset_bottom = 995.0
+theme_override_font_sizes/font_size = 36
+text = "Back"
+script = ExtResource("3_2vg3o")
+
+[node name="HNContainer" type="Container" parent="."]
+offset_left = 12.0
+offset_top = 23.0
+offset_right = 669.0
+offset_bottom = 511.0
+
+[node name="HNVBoxContainer" type="VBoxContainer" parent="HNContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

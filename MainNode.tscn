@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7qs60wk47yr2"]
 
-[ext_resource type="Script" path="res://Label.gd" id="1_6dyw0"]
-[ext_resource type="Script" path="res://node_2d.gd" id="1_pxrub"]
-[ext_resource type="Texture2D" uid="uid://0qr7mprviiqr" path="res://misato_obs.png" id="1_qtc46"]
-[ext_resource type="Script" path="res://HeroesButton.gd" id="3_5luto"]
-[ext_resource type="Script" path="res://Timer.gd" id="4_5uhqg"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_xk1i4"]
+[ext_resource type="Script" path="res://Label.gd" id="2_b0jrh"]
+[ext_resource type="Script" path="res://HeroesButton.gd" id="3_w3ff5"]
+[ext_resource type="Texture2D" uid="uid://0qr7mprviiqr" path="res://misato_obs.png" id="4_yclf5"]
+[ext_resource type="Script" path="res://GlobalTimer.gd" id="5_e780b"]
 
-[node name="MainNode2d" type="Node2D"]
-script = ExtResource("1_pxrub")
+[node name="MainNode" type="Node2D"]
+script = ExtResource("1_xk1i4")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -26,7 +26,7 @@ offset_bottom = 463.0
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Gold"
-script = ExtResource("1_6dyw0")
+script = ExtResource("2_b0jrh")
 
 [node name="HeroesButton" type="Button" parent="Control"]
 layout_mode = 2
@@ -36,13 +36,13 @@ offset_right = 499.0
 offset_bottom = 743.0
 theme_override_font_sizes/font_size = 36
 text = "Heroes"
-script = ExtResource("3_5luto")
+script = ExtResource("3_w3ff5")
 
 [node name="MisatoObs" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(574.5, 323.5)
 scale = Vector2(0.718125, 0.718889)
-texture = ExtResource("1_qtc46")
+texture = ExtResource("4_yclf5")
 
-[node name="Timer" type="Timer" parent="."]
-script = ExtResource("4_5uhqg")
+[node name="GlobalTimer" type="Timer" parent="."]
+script = ExtResource("5_e780b")

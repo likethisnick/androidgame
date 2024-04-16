@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn3pkqhtpudvj"]
+
+[ext_resource type="Script" path="res://campaign_node.gd" id="1_g3u7n"]
+[ext_resource type="Script" path="res://CNBackButton.gd" id="2_rmgr2"]
+[ext_resource type="Script" path="res://CNRedeemButton.gd" id="3_46h16"]
+
+[node name="CampaignNode" type="Node2D"]
+script = ExtResource("1_g3u7n")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 146.0
+offset_top = 166.0
+offset_right = 525.0
+offset_bottom = 321.0
+value = 100.0
+
+[node name="CNBackButton" type="Button" parent="."]
+offset_left = 254.0
+offset_top = 630.0
+offset_right = 428.0
+offset_bottom = 755.0
+theme_override_font_sizes/font_size = 36
+text = "Back"
+script = ExtResource("2_rmgr2")
+
+[node name="CNRedeemButton" type="Button" parent="."]
+visible = false
+offset_left = 250.0
+offset_top = 402.0
+offset_right = 424.0
+offset_bottom = 527.0
+theme_override_font_sizes/font_size = 36
+text = "Redeem"
+script = ExtResource("3_46h16")

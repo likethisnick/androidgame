@@ -1,5 +1,6 @@
 extends Button
 
+var heroName = "Vitalya"
 var config = ConfigFile.new()
 var config_file = "user://heroConfig.cfg"
 var score_data = {}
@@ -9,8 +10,8 @@ func _ready():
 	
 	var err = config.load("user://heroConfig.cfg")
 	for save in config.get_sections():
-		var heroId = config.get_value(save, "heroId")
-		if heroId == 1:
+		var configHeroName = config.get_value(save, "heroName")
+		if configHeroName == heroName:
 			$".".set_disabled(true)
 
 func _process(delta):

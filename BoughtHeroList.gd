@@ -15,7 +15,9 @@ func _ready():
 
 # Function to handle button presses
 func _on_button_pressed():
-	print("Button pressed!")
+	# сделать глобальную переменную в которй указать текущего бойца для открытия его инвентаря
+	get_tree().change_scene_to_file("res://inventory_node.tscn")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
